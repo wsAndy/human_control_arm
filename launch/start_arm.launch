@@ -1,0 +1,12 @@
+<launch>
+
+    <arg name="cycle" default="5"/>
+	<arg name="INIT" default="10"/>
+	<arg name="N" default="10"/>
+
+    <node pkg="human_control_arm" name="human_control_arm" type="human_control_arm" output="screen">
+	    <param name="cycle" type="int" value="$(arg cycle)"/>
+		<param name="INIT" type="int" value="$(arg INIT)"/>
+		<param name="N" type="int" value="$(arg N)"/>
+	</node>
+</launch>
